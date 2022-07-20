@@ -21,7 +21,7 @@ public class ParseService {
     private static int initialS=0;
     private static int initialMS=0;
 
-    public void parseFile(File file) throws FileNotFoundException {
+    public void parseFile(File file,OutputStream out) throws FileNotFoundException {
         //mac层
         byte[] globalHeaderBuffer = new byte[24];
 
@@ -35,7 +35,6 @@ public class ParseService {
 
 
         FileInputStream in=null;
-        FileOutputStream out=new FileOutputStream("E:\\工具\\5g测量\\周报\\7-18\\45\\45-test1.txt");
         try {
 
             in=new FileInputStream(file);
